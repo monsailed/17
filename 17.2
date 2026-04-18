@@ -1,0 +1,26 @@
+const expenses = [
+  { category: "Еда", amount: 500 }, 
+  { category: "Транспорт", amount: 100 }, 
+  { category: "Еда", amount: 300 } 
+];
+
+const allBuy = expenses.reduce((acc, item) => {
+
+  if (acc[item.category]) {
+    
+
+    acc[item.category] = acc[item.category] + item.amount;
+    
+  } else {
+    
+
+    acc[item.category] = item.amount;
+    
+  }
+  
+
+  return acc;
+  
+}, {}); 
+
+console.log(allBuy);
