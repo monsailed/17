@@ -1,0 +1,9 @@
+const scores = [15, 82, 34, 99, 45];
+
+// Ваш код здесь:
+
+const bigNum = scores.reduce((acc, score) => {
+  score > acc ? acc = score : acc = acc;
+  return acc;
+}, 0)
+console.log(bigNum);
